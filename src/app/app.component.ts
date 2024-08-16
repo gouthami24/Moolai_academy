@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Moolai_stealth';
+  title = 'MoolAI';
   
-  onSubmit() {
-    console.log('Button Clicked!!');
+  constructor() { 
   }
+  @HostListener('document:scroll') scrollover(){
+    console.log(document.body.scrollTop,'scrolllength#');
+    
+  }
+
+  onActivate() {
+   
+      window.scroll({ 
+              top: 0, 
+              left: 0, 
+              behavior: 'smooth' 
+       });
+   
+      
+}
 }

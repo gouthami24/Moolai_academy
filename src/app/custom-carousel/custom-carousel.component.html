@@ -1,0 +1,12 @@
+<mat-tab-group class="custom-carousel">
+    <mat-tab *ngFor="let slide of slides">
+      <ng-template mat-tab-label>
+        <img [src]="slide.img" alt="{{ slide.title }}" class="carousel-img">
+      </ng-template>
+      <div class="carousel-content">
+        <h2>{{ slide.title }}</h2>
+        <p>{{ slide.description }}</p>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  

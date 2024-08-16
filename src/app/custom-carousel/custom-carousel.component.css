@@ -1,0 +1,25 @@
+.custom-carousel {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carousel-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-content p {
+    font-size: 18px;
+  }
+  
