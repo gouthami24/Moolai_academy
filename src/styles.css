@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Default Light Mode */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 body {
     background-color: #000000;
     color: #ffffff;
@@ -30,3 +31,7 @@ body {
   
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-h1, .mat-headline-5, .mat-typography .mat-h1, .mat-typography .mat-headline-5, .mat-typography h1, .mat-typography h4, .mat-typography h3, .mat-typography h5 {
+  line-height: normal !important;
+  font-size: 22px;
+}

@@ -4,7 +4,9 @@
             loading="lazy"
             style="margin-top: -1px;" alt="Mool AI" />
         </div>
+        
             <div class="header-icons">
+                <div class="booknowbutton"><button mat-raised-button color="primary" (click)="openBookNow()">Book Now</button></div>
              <button (click)="toggleTheme()" class="theme-toggle">
              <i [ngClass]="isDarkMode ? 'fas fa-moon' : 'fas fa-sun'"></i>
             </button>

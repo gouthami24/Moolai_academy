@@ -1,0 +1,28 @@
+ <div class= "pt-10 p-5 xl:px-10 2xl:px-0">
+    <!-- <h2 class="text-30px lg:text-40px dark:text-[#FFFFFF] font-bold flex justify-start gap-5px tracking--1px">Course Syllabus</h2> -->
+    
+    <div class="w-full mt-5 lg:mt-10 syllabus_grid" style="display:contents;">
+      <div class="carousel-container">
+        
+        <button class="carousel-arrow prev-arrow" (click)="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        &nbsp;&nbsp;
+        <div class="carousel-content">
+          <div class="carousel-pages" [ngStyle]="{'transform': 'translateX(' + (-selectedIndex * 384) + 'px)', 'transition-duration': '500ms', 'transition-timing-function': 'ease-in-out'}">
+            <div class="card" *ngFor="let item of syllabusItems">
+              <img [src]="item.img" [alt]="item.alt" class="rounded-t-[20px]">
+              <div class="card-content dark:bg-[#141517] bg-gray-400 rounded-b-[20px]">
+                <h4>{{ item.text }}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+         &nbsp;&nbsp;
+        <button class="carousel-arrow next-arrow" (click)="nextSlide()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+   </div> 
+  

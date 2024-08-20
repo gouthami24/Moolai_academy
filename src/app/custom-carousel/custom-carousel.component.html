@@ -1,12 +1,28 @@
-<mat-tab-group class="custom-carousel">
+<!-- <mat-tab-group class="custom-carousel">
     <mat-tab *ngFor="let slide of slides">
       <ng-template mat-tab-label>
-        <img [src]="slide.img" alt="{{ slide.title }}" class="carousel-img">
+        <h2>{{ slide.title }}</h2>
+        
       </ng-template>
       <div class="carousel-content">
-        <h2>{{ slide.title }}</h2>
+        <img [src]="slide.img" alt="{{ slide.title }}" class="carousel-img">
         <p>{{ slide.description }}</p>
       </div>
     </mat-tab>
-  </mat-tab-group>
+  </mat-tab-group> -->
   
+  
+  <mat-tab-group [(selectedIndex)]="selectedIndex" class="custom-carousel">
+    <mat-tab *ngFor="let slide of slides; let i = index">
+      <ng-template mat-tab-label>
+        <span [ngClass]="{'active-title': selectedIndex === i, 'inactive-title': selectedIndex !== i}" style="font-size: 26px; font-weight:500; color: rgb(123 42 255);">
+          {{ slide.title }}
+        </span>
+      </ng-template>
+      <div class="carousel-content">
+        <img [src]="slide.img" alt="{{ slide.title }}" class="carousel-icon">
+        <h2 style="font-size: 30px;">{{ slide.title }}</h2>
+        <h4 style="font-size:26px;">{{ slide.description }}</h4>
+      </div>
+    </mat-tab>
+  </mat-tab-group>

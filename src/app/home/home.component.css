@@ -186,8 +186,66 @@
   form .button input:hover {
     background: linear-gradient(90deg, #7B4BA5 21.7376708984375%, #4277B6 80.91797232627869%);
   }
+
+  .animated-text-container {
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    margin-bottom:30px;
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: bold;
+    overflow: hidden;
+   display: flex;
+  }
+  .animated-text {
+    opacity: 0;
+    position: absolute;
+    background-image: linear-gradient(to right, #ffa977, #ffa977);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textAnimation 18s infinite;
+  }
   
+  .animated-text:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .animated-text:nth-child(2) {
+    animation-delay: 3s;
+  }
+  
+  .animated-text:nth-child(3) {
+    animation-delay: 6s;
+  }
+
+  .animated-text:nth-child(4) {
+    animation-delay: 9s;
+  }
+
+  .animated-text:nth-child(5) {
+    animation-delay: 12s;
+  }
+  .animated-text:nth-child(6) {
+    animation-delay: 15s;
+  }
+  
+  @keyframes textAnimation {
+    /* 0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; } */
+    2% { opacity: 0;  }
+    5% { opacity: 1;  }
+    17% { opacity: 1; }
+    20% { opacity: 0; }
+    80% { opacity: 0; }
+  }
   @media (max-width: 584px) {
+    .animated-text {
+      font-size: 1.75rem; /* Smaller text on mobile screens */
+    }
     .section-header img{
         width: 260px; 
         height: 100px;

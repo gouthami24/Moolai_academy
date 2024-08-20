@@ -1,4 +1,4 @@
-
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,6 @@
     padding-bottom: 0; /* Ensure no padding at the bottom */
     height: auto;
     overflow: hidden;
-    max-height: 500px;
   }
   .grid-section > * {
     margin-bottom: 0;
@@ -48,11 +47,12 @@
     .container {
       grid-template-columns: 1fr 1fr; /* Two columns on medium screens and above */
     }
+    
   }
   .animated-text-container {
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 15vh; /* Full viewport height */
     font-size: 4rem; /* Adjust size as needed */
     font-weight: bold;
     overflow: hidden;
@@ -74,7 +74,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
   }
   .animated-text {
@@ -151,12 +151,35 @@
   
   /* Responsive text sizes */
   @media (max-width: 767px) {
-    .animated-text {
-      font-size: 1.75rem; /* Smaller text on mobile screens */
+    .hide-on-mobile {
+      display: none;
     }
-  
+    .animated-text {
+      font-size: 3rem; /* Smaller text on mobile screens */
+    }
+    .animated-text-container {
+      justify-content: center;
+      align-items: center;
+      height: 10vh; /* Full viewport height */
+      font-size: 3rem; /* Adjust size as needed */
+      font-weight: bold;
+      overflow: hidden;
+      position: relative;
+    }
     .text-item {
       font-size: 1.75rem;
+    }
+    .about-us-desc
+    {
+      text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 400 !important;
+    }
+    .about-us-text{
+      margin-left: auto !important;
+      text-align: center !important;
+      font-size: 2.5rem !important;
     }
   }
 
@@ -211,12 +234,12 @@
   
   .detail-title {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     
   }
   
   .detail-description {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 4px;
     
   }
@@ -266,17 +289,30 @@
 
 /*bOOK nOW bUTTON*/
 
-.demobtn {
-    padding: 0.75rem 2rem;
-    outline: none;
-    font-size: 2.25rem;
-    color: WHITE;
-    background-color: rgb(123 42 255);
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: 0.3s;
-    max-width: max-content;
-  }
+button {
+  padding: 0.75rem 1rem;
+  outline: none;
+  color: WHITE;
+  background-color: rgb(123 42 255);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: max-content;
+  justify-content: center;
+  align-content: center;
+}
+
+.mat-mdc-raised-button.mat-mdc-button-base[_ngcontent-ng-c3333214609] {
+
+  height: max-content;
+  font-size: xx-large;
+}
+.booknowbutton {
+  text-align: center;
+}
+  .items-center {
+    align-items: center;
+}
 /* CSS for footer */
 .footer {
   position:relative;

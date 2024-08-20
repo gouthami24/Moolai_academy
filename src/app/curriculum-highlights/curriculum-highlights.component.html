@@ -1,0 +1,24 @@
+<div class="relative overflow-hidden text-center" style="display: flex; justify-content:center;">
+    <div class="w-full relative">
+        <div class="w-full curriculums_slides">
+          <div class="carousel-container" >
+            <button class="carousel-arrow prev-arrow" (click)="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-content">
+              <div class="carousel-pages" [ngStyle]="{'transform': 'translateX(' + (-selectedIndex * 1100) + 'px)', 'transition-duration': '500ms', 'transition-timing-function': 'ease-in-out'}">
+                <div class="slide" *ngFor="let slide of slides">
+                  <img [src]="slide.img" [alt]="slide.alt" class="w-full">
+                </div>
+              </div>
+            </div>
+        
+            &nbsp;&nbsp;&nbsp;<button class="carousel-arrow next-arrow" (click)="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          
+          <div class="carousel-dots">
+            <button class="carousel-dot" *ngFor="let slide of slides; let i = index" [class.active]="selectedIndex === i" (click)="goToSlide(i)"></button>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  

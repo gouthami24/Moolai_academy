@@ -1,0 +1,109 @@
+.w-full {
+    width: 100%;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-12 {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  
+    .lg\:col-span-4 {
+      grid-column: span 4 / span 4;
+    }
+  
+    .lg\:col-span-5 {
+      grid-column: span 5 / span 5;
+    }
+  
+    .lg\:col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+  
+    .lg\:gap-10 {
+      gap: 40px;
+    }
+  
+    .lg\:my-10 {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 24px;
+    }
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .lg\:gap-24 {
+      gap: 24px;
+    }
+  
+    .lg\:mt-5 {
+      margin-top: 20px;
+    }
+  
+    .lg\:min-h-\[300px\] {
+      min-height: 300px;
+    }
+  }
+  
+  img {
+    width: 60px;
+  }
+  
+  @media (min-width: 1024px) {
+    img {
+      width: 85px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    img {
+      width: auto;
+    }
+  }
+  
+  .border {
+    border-width: 1px;
+    border-color: #ccc;
+  }
+  
+  .rounded-3xl {
+    border-radius: 1.5rem;
+  }
+  
+  .bg-gray-900\/20 {
+    background-color: rgba(31, 41, 55, 0.2);
+  }
+  
+  .dark\:bg-gray-900\/40 {
+    background-color: rgb(107 164 245 / 20%);
+  }
+  
+  .dark\:text-\[#fff\] {
+    color: #fff;
+  }
+  

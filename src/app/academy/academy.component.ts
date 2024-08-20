@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookNowModalComponent } from '../book-now-modal/book-now-modal.component';
 
 @Component({
   selector: 'app-academy',
@@ -10,7 +12,7 @@ export class AcademyComponent implements OnInit{
   isDarkMode: boolean = false;
   navbg:any;
   navlinkbg: any;
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     // Load the theme preference if it exists
@@ -18,11 +20,12 @@ export class AcademyComponent implements OnInit{
     this.isDarkMode = theme === 'dark';
     this.applyTheme();
   }
-
-  toggleTheme(): void {
-    console.log("Toggle Button clicked!!")
-    this.isDarkMode = !this.isDarkMode;
-    this.applyTheme();
+  
+  openBookNow(): void {
+    this.dialog.open(BookNowModalComponent, {
+      width: '400px', // Width of the modal dialog
+      disableClose: false // Allows closing by clicking outside
+    });
   }
 
   applyTheme(): void {

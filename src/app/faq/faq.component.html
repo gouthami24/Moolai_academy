@@ -1,0 +1,18 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let faq of visibleFaqs" style="background:#d6ebfb;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ faq.question }}
+         
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h5><br/>{{ faq.answer }}</h5>
+      <div class="separator"></div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+  <div class="see-more-less-container">
+    <a><button mat-raised-button color="primary" *ngIf="!showAll" (click)="toggleShowAll()">See More</button></a>
+    <button mat-raised-button color="primary" *ngIf="showAll" (click)="toggleShowAll()">See Less</button>
+  </div>
+  

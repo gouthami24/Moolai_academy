@@ -11,12 +11,11 @@
                 <span class="animated-text">Transform</span>
                 <span class="animated-text">Thrive</span>
             </h1>
-           
           </div>
       
           <!-- Second Grid: Full-size Image -->
           <div class="image-container">
-            <img src="/assets/banner_img.png" alt="Full Size Image" class="w-full h-full object-cover" />
+            <img src="/assets/banner_img.png" alt="Full Size Image" class="w-full rounded-xl" />
           </div>
           
         </div>
@@ -67,7 +66,7 @@
             </div>
             <div class="detail-text">
               <h4 class="detail-title">Location</h4>
-              <p class="detail-description">San Ramon</p>
+              <p class="detail-description">Tri-Valley</p>
             </div>
           </div>
           <!-- Duration -->
@@ -77,7 +76,7 @@
             </div>
             <div class="detail-text">
               <h4 class="detail-title">Duration</h4>
-              <p class="detail-description">2 hours per day/4 weeks</p>
+              <p class="detail-description">8 hours</p>
             </div>
           </div>
           <!-- Starting Date -->
@@ -87,7 +86,7 @@
             </div>
             <div class="detail-text">
               <h4 class="detail-title">Starting Date</h4>
-              <p class="detail-description">September 2, 2024</p>
+              <p class="detail-description">August 25, 2024</p>
             </div>
           </div>
           <!-- Time -->
@@ -97,7 +96,7 @@
             </div>
             <div class="detail-text">
               <h4 class="detail-title">Time</h4>
-              <p class="detail-description">4 PM - 6 PM PST</p>
+              <p class="detail-description">9 PM - 5 PM PST</p>
             </div>
           </div>
           <!-- Cost -->
@@ -107,7 +106,7 @@
             </div>
             <div class="detail-text">
               <h4 class="detail-title">Cost</h4>
-              <p class="detail-description">$2999</p>
+              <p class="detail-description">$999</p>
             </div>
           </div>
           <!-- Weekdays -->
@@ -116,8 +115,8 @@
               <img class="icon-image" src="/assets/img/weekends.webp" alt="Weekdays">
             </div>
             <div class="detail-text">
-              <h4 class="detail-title">Weekdays</h4>
-              <p class="detail-description">Monday - Friday</p>
+              <h4 class="detail-title">Weekends</h4>
+              <p class="detail-description">Saturday - Sunday</p>
             </div>
           </div>
         </div>
@@ -139,7 +138,7 @@
             <div style="max-width: max-content;">
                 <h1 class="main__header" style="text-align: center; margin-left: auto; margin-right:auto;">Limited enrollment, so secure your seat today!</h1>
                 <br/>
-                <div style="text-align: center; margin-left: auto; margin-right:auto;"><button class="demobtn"   data-toggle="modal" data-target="#myModal">Book now</button></div>
+                <div class="booknowbutton"><button mat-raised-button color="primary" (click)="openBookNow()">Book Now</button></div>
             
             </div></div>
     </section>
@@ -154,9 +153,103 @@
             </div></div>
     </section>
     <section>
+        <br/><br/>
         <app-custom-carousel></app-custom-carousel>
-
+        <br/>
     </section>
+    
+    <section class="hide-on-mobile">
+      <hr><br/>
+      <div class="header__content">
+          <div class="profession" style="max-width: 1000px;">
+              <h1 class="main__header" style="text-align: center; margin-left:auto; margin-right:auto;">Tailored Learning for Every Profession</h1>
+              <br/>
+              <div class="detail-flex items-center justify-center">
+                <div class="detail-flex items-center" style="margin-right: 40px; padding-right:40px;">
+                  <img src="assets/img/students.webp" alt="students" class="w-[60px] lg:w-[80px] xl:w-auto">
+                  <h3 class="text-[18px] lg:text-[24px] dark:text-[#FFFFFF] font-semibold">Students</h3>
+                </div>
+                <br/><br/>
+                <div class="detail-flex items-center" style="margin-right: 40px; padding-right:40px;">
+                  <img src="assets/img/professionals.webp" alt="professionals" class="w-[60px] lg:w-[80px] xl:w-auto">
+                  <h3 class="text-[18px] lg:text-[24px] dark:text-[#FFFFFF] font-semibold">Professionals</h3>
+                </div>
+                <div class="detail-flex items-center" style="margin-right: 40px; padding-right:40px;">
+                  <img src="assets/img/businesses.webp" alt="businesses" class="w-[60px] lg:w-[80px] xl:w-auto">
+                  <h3 class="text-[18px] lg:text-[24px] dark:text-[#FFFFFF] font-semibold">Businesses</h3>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+  </section>
+
+<br/><br/><hr>
+<br/>
+    <section class="usecase">
+      <div class="header__content">
+          <div style="max-width:1000px;">
+              <h1 class="main__header" style="text-align: center; margin-left: auto; margin-right:auto;">Our Instructor’s Background</h1>
+              <br/>
+            </div>
+            <br/>
+            
+            </div>
+            <app-instructor-experience></app-instructor-experience>
+            <br/>
+            </section>
+            <br/><br/><hr>
+            <br/>
+                <section class="usecase">
+                  <div class="header__content">
+                      <div style="max-width:1400px;">
+                          <h1 class="main__header" style="text-align: center; margin-left: auto; margin-right:auto;">Curriculum Highlights</h1>
+                          <h4 class="section__subtitle" style="text-align: center; margin-left: auto; margin-right:auto; max-width: 1400px;">
+                            Build custom LLM applications from deployment to customization, in one comprehensive program.</h4>
+                        </div>
+                        </div>
+                        <br/>
+                        <app-curriculum-highlights></app-curriculum-highlights>
+                        <br/><br/>
+                        </section>
+                        <br/><br/><hr>
+                        <br/>
+                        <section>
+                          <div class="header__content">
+                            
+                                <h1 class="main__header" style="text-align: center; margin-left: auto; margin-right:auto;">Course Syllabus</h1>
+                              </div>
+                             
+                          <app-course-syllabus></app-course-syllabus>
+                        </section>
+                        <br/><br/><hr>
+                        <br/>
+                        <section>
+                          <div class="header__content">
+                            
+                                <h1 class="main__header" style="text-align: center; margin-left: auto; margin-right:auto;">Frequently Asked Questions</h1>
+                               
+                              
+                            </div>
+                            <br/><br/>
+                            <app-faq></app-faq>
+                            </section>
+                            <br/><br/><hr>
+                        <br/><br/>
+                        <footer>
+                          <div>
+                            <div class="py-6 px-4 dark:bg-black text-center">
+                              <span class="text-sm dark:text-gray-300 sm:text-center">
+                                Copyrights © 2024 
+                                <a href="/" class="hover:underline">Mool AI</a> 
+                                All Rights Reserved.
+                              </span>
+                              
+                            </div>
+                           
+                          </div>
+                          
+                        </footer>
     <!-- navbar end  -->
     <!-- <footer class="footer">
       <div class="copy">Copyright © Mool AI 2024. All rights reserved. </div>

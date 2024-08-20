@@ -1,0 +1,144 @@
+.relative {
+    position: relative;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-41px {
+    margin-top: 41px;
+  }
+  
+  .mb-10 {
+    margin-bottom: 2.5rem;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .text-30px {
+    font-size: 30px;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .tracking--1px {
+    letter-spacing: -1px;
+  }
+  
+  .mt-18px {
+    margin-top: 18px;
+  }
+  
+  .font-400 {
+    font-weight: 400;
+  }
+  
+  .text-16px {
+    font-size: 16px;
+  }
+  
+  .w-full {
+    max-width:1200px;
+    
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carousel-content {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-pages {
+    display: flex;
+    transition: transform 5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 1100px;
+    max-width: 1500px;
+  }
+  
+  .carousel-arrow {
+    background-color: rgb(123 42 255);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    border-radius: 50%; /* Makes the button round */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50px; /* Adjust the size of the button */
+    height: 50px; /* Ensure it is a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: #000000;
+  }
+  
+  .fas {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .carousel-dot.active {
+    background-color: rgb(123 42 255);
+  }
+ 
+  @media (min-width: 767px) {
+    .lg\:mt-50px {
+      margin-top: 50px;
+    }
+  
+    .text-40px {
+      font-size: 40px;
+    }
+  
+    .text-20px {
+      font-size: 20px;
+    }
+  
+    .w-auto {
+      width: auto;
+    }
+    
+  }
+  @media (max-width:767px) {
+    .w-full{
+        max-width:367px;
+    }
+    
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookNowModalComponent } from '../book-now-modal/book-now-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,7 @@ export class HeaderComponent implements OnInit {
   logo = "assets/moolai_academy_logo_light.jpg";
   isDarkMode: boolean = false;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     // Load the theme preference if it exists
@@ -23,7 +25,13 @@ export class HeaderComponent implements OnInit {
     this.isDarkMode = !this.isDarkMode;
     this.applyTheme();
   }
-
+  
+  openBookNow(): void {
+    this.dialog.open(BookNowModalComponent, {
+      width: '400px', // Width of the modal dialog
+      disableClose: false // Allows closing by clicking outside
+    });
+  }
   applyTheme(): void {
     if (this.isDarkMode) {
       this.logo =  "assets/moolai_academy_logo_light.jpg";

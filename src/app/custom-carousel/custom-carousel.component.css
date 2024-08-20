@@ -1,4 +1,4 @@
-.custom-carousel {
+/* .custom-carousel {
     width: 100%;
     margin: auto;
   }
@@ -22,4 +22,56 @@
   .carousel-content p {
     font-size: 18px;
   }
+   */
+   .custom-carousel {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .carousel-icon {
+    width: 200px; /* Set the width to make the image icon-sized */
+    height: 200px; /* Maintain aspect ratio by setting height */
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-content h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .carousel-content h2 {
+      font-size: 22px;
+    }
+    
+    .carousel-content p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carousel-content h2 {
+      font-size: 24px;
+    }
+    
+    .carousel-content p {
+      font-size: 18px;
+    }
+  }
+  
+  
+  
   

@@ -7,7 +7,7 @@ const routes: Routes = [
   
   {
     path: "",
-    redirectTo: '/academy', pathMatch: 'full',
+    redirectTo: '/home', pathMatch: 'full',
   },
   {
     path: "home",

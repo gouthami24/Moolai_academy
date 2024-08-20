@@ -1,0 +1,19 @@
+.mat-dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Center the dialog vertically */
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  

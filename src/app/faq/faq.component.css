@@ -1,0 +1,38 @@
+mat-accordion {
+    max-width: 1000px;
+    margin: 0 auto;
+    display:grid;
+    align-items:center;
+    justify-content:center;
+  }
+mat-panel-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+  .see-more-less-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 0.75rem 1rem;
+    outline: none;
+    font-size: 1.2rem;
+    color: WHITE;
+    background-color: rgb(123 42 255);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: max-content;
+  }
+
+  .separator {
+    border-top: 1px solid #ccc; /* Adds the line separator */
+    margin: 10px 10px; /* Adds space around the separator */
+}
+
+mat-expansion-panel {
+    margin-bottom: 10px; /* Adds space between each expansion panel */
+}
+
+  

@@ -1,0 +1,91 @@
+.container-fluid {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  .text-30px {
+    font-size: 30px;
+  }
+  
+  .text-40px {
+    font-size: 40px;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .syllabus_grid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .carousel-content {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-pages {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card {
+    --tw-bg-opacity: 1;
+    background-color: rgb(20 21 23 / var(--tw-bg-opacity));
+    min-width: 384px;
+    height:max-content;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .card-content {
+    padding: 22px;
+    height: 200px;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .carousel-arrow {
+    background-color: rgb(123 42 255);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: black;
+  }
+  
+  .fas {
+    font-size: 1.5rem;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
