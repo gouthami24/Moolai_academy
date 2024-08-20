@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/eb9216b6-c004-4aae-bf67-2e1527f47324/resourceGroups/moolai-academy_group/providers/Microsoft.Web/sites/moolai-academy",
+    "appService.deploySubpath": "dist\\moolai-stealth"
+}

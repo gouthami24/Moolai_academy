@@ -8,32 +8,32 @@ import { Component, OnInit, OnDestroy  } from '@angular/core';
 export class CustomCarouselComponent {
   slides = [
     {
-      img: '/assets/img/hands-on-projects.webp',
+      img: '/assets/img/hands-on-projects.jpg',
       title: 'Hands-On Projects',
       description: 'Practical projects for real-world application of knowledge.'
     },
     {
-      img: '/assets/img/certification.webp',
+      img: '/assets/img/certification.jpg',
       title: 'Certification',
       description: 'Earn a certificate to showcase your Generative AI proficiency.'
     },
     {
-      img: '/assets/img/deployable-ai-applications.webp',
+      img: '/assets/img/deployable-ai-applications.jpg',
       title: 'Deployable AI Applications',
       description: 'Graduate with a deployable LLM application in Streamlit or Hugging Face cloud.'
     },
     {
-      img: '/assets/img/in-person-teaching.webp',
+      img: '/assets/img/in-person-teaching.jpg',
       title: 'In-Person Teaching',
       description: 'face to face collaborative instruction with direct interaction.'
     },
     {
-      img: '/assets/img/immediate-feedback.webp',
+      img: '/assets/img/immediate-feedback.jpg',
       title: 'Immediate Feedback',
       description: 'Timely, actionable feedback for continuous skill refinement.'
     },
     {
-      img: '/assets/img/small-class-size.webp',
+      img: '/assets/img/small-class-size.jpg',
       title: 'Small Class Sizes',
       description: 'Personalized attention and strong community in limited-size classes.'
     },

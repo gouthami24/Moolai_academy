@@ -5,9 +5,14 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');  
 
 const app = express();
+// app.use(cors({
+//     origin: 'http://localhost:4200', 
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+// }));
 
 app.use(cors({
-    origin: 'http://localhost:4200',  // Allow only the Angular app to access this server
+    origin: 'https://moolai-academy-h6ddhtb0gsgsascw.eastus-01.azurewebsites.net',  // Allow only the Angular app to access this server
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
