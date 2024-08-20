@@ -160,7 +160,7 @@
     .animated-text-container {
       justify-content: center;
       align-items: center;
-      height: 10vh; /* Full viewport height */
+      height: 15vh; /* Full viewport height */
       font-size: 3rem; /* Adjust size as needed */
       font-weight: bold;
       overflow: hidden;
