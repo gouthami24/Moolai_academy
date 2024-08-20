@@ -302,12 +302,14 @@ button {
   align-content: center;
 }
 
-.mat-mdc-raised-button.mat-mdc-button-base[_ngcontent-ng-c3333214609] {
+.mat-mdc-raised-button.mat-mdc-button-base[_ngcontent-ng-c3003392008] {
 
   height: max-content;
   font-size: xx-large;
 }
 .booknowbutton {
+  height: max-content;
+  font-size: xx-large;
   text-align: center;
 }
   .items-center {
