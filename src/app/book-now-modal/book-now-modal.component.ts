@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { EmailService } from '../email.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+declare var Email: any;
 
 @Component({
   selector: 'app-book-now-modal',
@@ -12,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class BookNowModalComponent {
   bookNowForm: FormGroup;
-
+  email="";
   constructor(
     private emailService: EmailService,
     private snackBar: MatSnackBar,
@@ -32,23 +33,66 @@ export class BookNowModalComponent {
       const formData = this.bookNowForm.value;
       console.log("Inside On Submit Name, Email, Contact: ",formData);
 
+      let reqObj = 
+  {
+    email: formData.email,
+    phonenumber: formData.contactNumber,
+    fullname: formData.name
+  }
+
+  this.http.post('https://mool-be-academy-cnefh7fycjerceg7.eastus-01.azurewebsites.net/send-email', reqObj)
+        .subscribe(
+          (response: any) => {
+            console.log('Email sent successfully', response);
+            this.showSuccess();
+          },
+          (error: any) => {
+            console.log('Error sending email', error);
+            this.showError();
+          }
+        );
+//   Email.send({
+//     Host : "smtp.elasticemail.com",
+//    Username : "trymoolai@outlook.com", 
+//    Password : "C1850A80DD1C6A1D4DBDAD945A7DE4D24118",          //Enter your password here
+//    To : "swarna.goldstar@gmail.com",
+//    From : "trymoolai@outlook.com",
+//    Subject : "Gen AI Academy Ayg 25th Cohort",
+//   Body : `
+         
+//          <b>Name: 
+//         </b>${reqObj.fullname} <br />
+//          <b>Email: </b>${reqObj.email}<br />
+//         <b>Phone Number:</b> <br /> 
+//         ${reqObj.phonenumber} <br>
+//         <br> <b>~End of Message.~</b> `
+// }).then((response: any) => {
+     
+//       console.log(response);
+//       this.showSuccess();
+     
+//     }, (error: any) => {
+//       console.log({ error });
+//       this.showError();
+//     })
+
       // const emailData = {
       //   to: ['swarna.goldstar@gmail.com', 'swarnab@trymool.ai'],
       //   subject: 'August 25th 2024 Cohort',
       //   text: `Name: ${formData.name}\nEmail: ${formData.email}\nContact Number: ${formData.contactNumber}`
       // };
 
-      this.emailService.sendEmail(formData.name, formData.email, formData.contactNumber)
-      .subscribe(
-        response => {
-          console.log('Email sent successfully', response);
-          this.showSuccess();
-        },
-        error => {
-          console.error('Error sending email', error);
-          this.showError();
-        }
-      );
+      // this.emailService.sendEmail(formData.name, formData.email, formData.contactNumber)
+      // .subscribe(
+      //   response => {
+      //     console.log('Email sent successfully', response);
+      //     this.showSuccess();
+      //   },
+      //   error => {
+      //     console.error('Error sending email', error);
+      //     this.showError();
+      //   }
+      // );
       this.dialogRef.close();
     }
   }
