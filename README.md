@@ -1,27 +1,55 @@
-# MoolaiStealth
+Moolai Academy
+This project was generated with Angular CLI version 16.2.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Installation
+Before you can run the project, you need to install the necessary dependencies. Run the following command in your project directory:
 
-## Development server
+bash
+Copy code
+npm install
+Development Server
+To start the development server, run:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+bash
+Copy code
+ng serve
+Navigate to http://localhost:4200/ in your browser. The application will automatically reload if you make any changes to the source files.
 
-## Code scaffolding
+Code Scaffolding
+To generate a new component, run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+bash
+Copy code
+ng generate component component-name
+You can also use ng generate to create directives, pipes, services, classes, guards, interfaces, enums, or modules.
 
-## Build
+Build
+To build the project, run:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+bash
+Copy code
+ng build
+The build artifacts will be stored in the dist/ directory.
 
-## Running unit tests
+Running Unit Tests
+To execute the unit tests via Karma, run:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+bash
+Copy code
+ng test
+Running End-to-End Tests
+To execute end-to-end tests via a platform of your choice, run:
 
-## Running end-to-end tests
+bash
+Copy code
+ng e2e
+Note: To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Deployment
+The application is hosted on Azure and can be accessed via the following link:
 
-## Further help
+Moolai Academy Portal App
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Further Help
+For more help with the Angular CLI, you can use the ng help command or refer to the Angular CLI Overview and Command Reference page.
+
