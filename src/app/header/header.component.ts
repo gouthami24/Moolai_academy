@@ -8,7 +8,7 @@ import { BookNowModalComponent } from '../book-now-modal/book-now-modal.componen
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  logo = "assets/moolai_academy_logo_light.jpg";
+  logo = "assets/moolai_logo.png";
   isDarkMode: boolean = false;
 
   constructor(private dialog: MatDialog) { }
@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleTheme(): void {
-    this.logo =  "assets/moolai_academy_logo_dark.jpg";
     this.isDarkMode = !this.isDarkMode;
     this.applyTheme();
   }
@@ -34,11 +33,9 @@ export class HeaderComponent implements OnInit {
   }
   applyTheme(): void {
     if (this.isDarkMode) {
-      this.logo =  "assets/moolai_academy_logo_light.jpg";
       document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark');
     } else {
-      this.logo =  "assets/moolai_academy_logo_dark.jpg";
       document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
     }
