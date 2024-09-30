@@ -36,20 +36,21 @@ export class BookNowModalComponent {
       };
 
       // POST request to your Azure Function
-      const azureFunctionUrl = 'https://trymool-sendgrid-email.azurewebsites.net';
+      const azureFunctionUrl = 'https://trymool-sendgrid-email.azurewebsites.net/api/src';
 
-      this.http.post(azureFunctionUrl, reqObj)
+      this.http.post(azureFunctionUrl, reqObj, { responseType: 'text' })
         .subscribe(
           (response: any) => {
             console.log('Email sent successfully', response);
             this.showSuccess();
+            this.dialogRef.close();
           },
           (error: any) => {
             console.log('Error sending email', error);
             this.showError();
           }
         );
-      this.dialogRef.close();
+      
     }
   }
 
