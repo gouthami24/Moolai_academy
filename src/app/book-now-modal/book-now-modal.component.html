@@ -20,6 +20,13 @@
       <mat-error *ngIf="bookNowForm.get('contactNumber')?.hasError('required')">Contact Number is required</mat-error>
     </mat-form-field>
 
+    <div formGroupName="Available Dates"></div>
+      <p>Select Available Dates:</p>
+      <mat-checkbox formControlName="nov9">9 Nov 2024</mat-checkbox>
+      <mat-checkbox formControlName="nov16">16 Nov 2024</mat-checkbox>
+      <mat-checkbox formControlName="both">Both Dates</mat-checkbox>
+    </div>
+
     <div mat-dialog-actions>
       <button mat-button type="button" (click)="onClose()">Close</button>
       <button mat-raised-button type="submit" color="primary" type="submit">Submit</button>
