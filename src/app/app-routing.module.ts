@@ -7,17 +7,17 @@ const routes: Routes = [
   
   {
     path: "",
-    redirectTo: '/academy', pathMatch: 'full',
+    redirectTo: '/bootcamp', pathMatch: 'full',
   },
   {
     path: "home",
     component: HomeComponent,
   },
   {
-    path: "academy",
+    path: "bootcamp",
     component: AcademyComponent,
   },
-  { path: '**', redirectTo: '/academy' },
+  { path: '**', redirectTo: '/bootcamp' },
 ];
 
 @NgModule({
